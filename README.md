@@ -63,14 +63,36 @@ npm run dev
 - **Registrar Usuário**  
   `POST /api/usuarios/registrar`  
   Este endpoint é utilizado para registrar um novo usuário. Envie um JSON com as informações de registro, como nome, email e senha.
+  Recebe o seguinte objeto como body da requisição:
+  ```json
+  {
+    "nome": "Nome",
+    "email": "email@email.com",
+    "senha": "senha"
+  }
+  ```
 
 - **Login de Usuário**  
   `POST /api/usuarios/login`  
   Realiza o login do usuário, retornando um token JWT caso as credenciais estejam corretas.
+  Recebe o seguinte objeto como body da requisição:
+  ```json
+  {
+    "email": "email@email.com",
+    "senha": "senha"
+  }
+  ```
 
 - **Obter Produto por ID**  
-  `GET /api/produtos/:id`  
+  `POST /api/produtos/:id`  
   Retorna as informações de um produto específico baseado no seu ID.
+  Recebe o seguinte objeto como body da requisição:
+  ```json
+  {
+    "nome": "Nome",
+    "preco": 25.00
+  }
+  ```
 
 ## Como Contribuir
 
